@@ -8,11 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		7988DD7F1A5B85B700E1354D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7988DD7E1A5B85B700E1354D /* AppDelegate.swift */; };
-		7988DD811A5B85B700E1354D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7988DD801A5B85B700E1354D /* ViewController.swift */; };
 		7988DD841A5B85B700E1354D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7988DD821A5B85B700E1354D /* Main.storyboard */; };
 		7988DD861A5B85B700E1354D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7988DD851A5B85B700E1354D /* Images.xcassets */; };
 		7988DD891A5B85B700E1354D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7988DD871A5B85B700E1354D /* LaunchScreen.xib */; };
 		7988DD951A5B85B700E1354D /* TebTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7988DD941A5B85B700E1354D /* TebTestTests.swift */; };
+		7988DD9F1A5B862B00E1354D /* SnowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7988DD9E1A5B862B00E1354D /* SnowViewController.swift */; };
+		7988DDA11A5B863F00E1354D /* HawaiiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7988DDA01A5B863F00E1354D /* HawaiiViewController.swift */; };
+		7988DDA31A5B865600E1354D /* AmazonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7988DDA21A5B865600E1354D /* AmazonViewController.swift */; };
+		7988DDA71A5B868500E1354D /* SnowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7988DDA61A5B868500E1354D /* SnowView.swift */; };
+		7988DDA91A5B869A00E1354D /* HawaiiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7988DDA81A5B869A00E1354D /* HawaiiView.swift */; };
+		7988DDAB1A5B86AC00E1354D /* AmazonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7988DDAA1A5B86AC00E1354D /* AmazonView.swift */; };
+		7988DDAF1A5B86DC00E1354D /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7988DDAE1A5B86DC00E1354D /* TileView.swift */; };
+		79D73F191A62F65B001C7A54 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D73F181A62F65B001C7A54 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +36,20 @@
 		7988DD791A5B85B700E1354D /* TebTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TebTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7988DD7D1A5B85B700E1354D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7988DD7E1A5B85B700E1354D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7988DD801A5B85B700E1354D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7988DD831A5B85B700E1354D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7988DD851A5B85B700E1354D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7988DD881A5B85B700E1354D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		7988DD8E1A5B85B700E1354D /* TebTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TebTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7988DD931A5B85B700E1354D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7988DD941A5B85B700E1354D /* TebTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TebTestTests.swift; sourceTree = "<group>"; };
+		7988DD9E1A5B862B00E1354D /* SnowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnowViewController.swift; sourceTree = "<group>"; };
+		7988DDA01A5B863F00E1354D /* HawaiiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HawaiiViewController.swift; sourceTree = "<group>"; };
+		7988DDA21A5B865600E1354D /* AmazonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmazonViewController.swift; sourceTree = "<group>"; };
+		7988DDA61A5B868500E1354D /* SnowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnowView.swift; sourceTree = "<group>"; };
+		7988DDA81A5B869A00E1354D /* HawaiiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HawaiiView.swift; sourceTree = "<group>"; };
+		7988DDAA1A5B86AC00E1354D /* AmazonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmazonView.swift; sourceTree = "<group>"; };
+		7988DDAE1A5B86DC00E1354D /* TileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
+		79D73F181A62F65B001C7A54 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +92,14 @@
 			isa = PBXGroup;
 			children = (
 				7988DD7E1A5B85B700E1354D /* AppDelegate.swift */,
-				7988DD801A5B85B700E1354D /* ViewController.swift */,
+				7988DDAE1A5B86DC00E1354D /* TileView.swift */,
+				7988DD9E1A5B862B00E1354D /* SnowViewController.swift */,
+				7988DDA61A5B868500E1354D /* SnowView.swift */,
+				7988DDA01A5B863F00E1354D /* HawaiiViewController.swift */,
+				7988DDA81A5B869A00E1354D /* HawaiiView.swift */,
+				7988DDA21A5B865600E1354D /* AmazonViewController.swift */,
+				7988DDAA1A5B86AC00E1354D /* AmazonView.swift */,
+				79D73F181A62F65B001C7A54 /* TableViewController.swift */,
 				7988DD821A5B85B700E1354D /* Main.storyboard */,
 				7988DD851A5B85B700E1354D /* Images.xcassets */,
 				7988DD871A5B85B700E1354D /* LaunchScreen.xib */,
@@ -212,8 +233,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7988DD811A5B85B700E1354D /* ViewController.swift in Sources */,
+				7988DDAF1A5B86DC00E1354D /* TileView.swift in Sources */,
+				7988DDAB1A5B86AC00E1354D /* AmazonView.swift in Sources */,
+				7988DDA31A5B865600E1354D /* AmazonViewController.swift in Sources */,
+				7988DDA91A5B869A00E1354D /* HawaiiView.swift in Sources */,
+				7988DDA71A5B868500E1354D /* SnowView.swift in Sources */,
 				7988DD7F1A5B85B700E1354D /* AppDelegate.swift in Sources */,
+				79D73F191A62F65B001C7A54 /* TableViewController.swift in Sources */,
+				7988DD9F1A5B862B00E1354D /* SnowViewController.swift in Sources */,
+				7988DDA11A5B863F00E1354D /* HawaiiViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +433,7 @@
 				7988DD9A1A5B85B700E1354D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7988DD9B1A5B85B700E1354D /* Build configuration list for PBXNativeTarget "TebTestTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +442,7 @@
 				7988DD9D1A5B85B700E1354D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

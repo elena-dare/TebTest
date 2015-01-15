@@ -16,6 +16,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		// Override point for customization after application launch.
+		
+		if window == nil {
+			println("window is null");
+			return true;
+		}
+			
+		let tabBarController: UITabBarController = UITabBarController();
+		
+		tabBarController.viewControllers = [
+			SnowViewController(),
+			HawaiiViewController(),
+			AmazonViewController(),
+			TableViewController(style: UITableViewStyle.Grouped)
+		]
+		
+		//let snowViewController: SnowViewController = SnowViewController()
+		//let navigationController: UINavigationController = UINavigationController(nibName: nil, bundle: nil);
+		//navigationController.pushViewController(snowViewController, animated: false);
+		//snowViewController.append(navigationController);
+		
+		tabBarController.selectedIndex = 0 //unnecessary because starts from the first by default
+		window!.rootViewController = tabBarController;
+		
+		//window!.rootViewController = TableViewController(style: UITableViewStyle.Grouped)
+		
 		return true
 	}
 
@@ -40,7 +65,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func applicationWillTerminate(application: UIApplication) {
 		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 	}
-
 
 }
 
