@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D3CB052C-C04E-40B6-9951-CC369BFB9B7C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TebTest</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5017BD4374B9EE5D01AE4B4D61A89C98EAF8FCCC</key>
+		<string>https://github.com/elena-dare/TebTest.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TebTest.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5017BD4374B9EE5D01AE4B4D61A89C98EAF8FCCC</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/elena-dare/TebTest.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5017BD4374B9EE5D01AE4B4D61A89C98EAF8FCCC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5017BD4374B9EE5D01AE4B4D61A89C98EAF8FCCC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TebTest</string>
+		</dict>
+	</array>
+</dict>
+</plist>

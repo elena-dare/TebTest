@@ -8,8 +8,9 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController, UITextFieldDelegate {
 	let cellReuseIdentifier: String = "section"
+	var selected: NSIndexPath? = nil;
 	
 	let headers: [String] = [
 		"\n YOUR DATA",
@@ -18,8 +19,8 @@ class TableViewController: UITableViewController {
 	
 	let zones: [[String]] = [
 		[
-		"First name",
-		"Last name"
+		"First Name",
+		"Last Name"
 		],
 	
 		[
@@ -81,32 +82,94 @@ class TableViewController: UITableViewController {
 	
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("section", forIndexPath: indexPath) as UITableViewCell
-		//assert(indexPath.section == 0 && 0 <= indexPath.row && indexPath.row < puzzleView.count);
 		
         // Configure the cell...
 		cell.textLabel.text = zones[indexPath.section][indexPath.row];
 		let fileName: String = cell.textLabel.text! + ".jpg";
 		cell.imageView.image = UIImage(named: fileName);	//nil if .jpg file doesn't exist
 		
+		if indexPath.section == 0 {
+			cell.textLabel.textColor = UIColor.grayColor()
+		}
+		
 		return cell;
     }
 	
 	override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-		assert(0 <= section && section < headers.count);
 		return headers[section];
 	}
 	
 	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 		let cell: UITableViewCell? = tableView.cellForRowAtIndexPath(indexPath);
+		let textField: UITextField = UITextField(frame: cell!.textLabel.frame)
 		
-		if cell != nil {
-			if cell!.accessoryType == UITableViewCellAccessoryType.None {
-				cell!.accessoryType = UITableViewCellAccessoryType.Checkmark;
-			} else {
-				cell!.accessoryType = UITableViewCellAccessoryType.None;
+	
+		if indexPath.section == 1 {
+			if cell != nil {
+				if cell!.accessoryType == UITableViewCellAccessoryType.None {
+					cell!.accessoryType = UITableViewCellAccessoryType.Checkmark;
+				} else {
+					cell!.accessoryType = UITableViewCellAccessoryType.None;
+				}
+			}
+		}
+		
+		if indexPath.section == 0 {
+			if indexPath.row == 0 {
+				//cell.textLabel.text =  "hello";
+				let font: UIFont = cell!.textLabel.font;
+				let dy: CGFloat = (cell!.textLabel.bounds.size.height - font.lineHeight) / 2;
+				let frame: CGRect = CGRectMake(
+					cell!.textLabel.frame.origin.x,
+					cell!.textLabel.frame.origin.y + dy,
+					cell!.textLabel.bounds.size.width,
+					cell!.textLabel.bounds.size.height - dy
+				);
+				//let textField: UITextField = UITextField(frame: cell!.textLabel.frame)
+				textField.backgroundColor = UIColor.clearColor()
+				textField.textColor = UIColor.blackColor()
+				textField.placeholder = "First Name"
+				textField.autocorrectionType = UITextAutocorrectionType.No
+				textField.delegate = self
+				
+				cell!.textLabel.text = nil
+				cell!.addSubview(textField)
+				textField.becomeFirstResponder()
+			}
+			if indexPath.row == 1 {
+				let font: UIFont = cell!.textLabel.font;
+				let dy: CGFloat = (cell!.textLabel.bounds.size.height - font.lineHeight) / 2;
+				let frame: CGRect = CGRectMake(
+					cell!.textLabel.frame.origin.x,
+					cell!.textLabel.frame.origin.y + dy,
+					cell!.textLabel.bounds.size.width,
+					cell!.textLabel.bounds.size.height - dy
+				);
+				//let textField: UITextField = UITextField(frame: cell!.textLabel.frame)
+				textField.backgroundColor = UIColor.clearColor()
+				textField.textColor = UIColor.blackColor()
+				textField.placeholder = "Last Name"
+				//textField.font = cell.textLabel.font
+				textField.autocorrectionType = UITextAutocorrectionType.No
+				textField.delegate = self
+				
+				cell!.textLabel.text = nil
+				cell!.addSubview(textField)
+				textField.becomeFirstResponder()
 			}
 		}
 	}
+	
+	//called when the return key pressed and/or when move to a different cell
+	func textFieldShouldReturn (textField: UITextField) -> Bool {
+		textField.resignFirstResponder()
+		return true
+	}
+	
+	/*
+	func textFieldDidEndEditing(textField: UITextField) {
+	
+	}*/
 	
 	
     /*
