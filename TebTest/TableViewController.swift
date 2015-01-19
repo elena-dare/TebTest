@@ -10,11 +10,12 @@ import UIKit
 
 class TableViewController: UITableViewController, UITextFieldDelegate {
 	let cellReuseIdentifier: String = "section"
-	var selected: NSIndexPath? = nil;
+	
 	
 	let headers: [String] = [
 		"\n YOUR DATA",
-		"SCORE"
+		"SCORE",
+		"IMPORTANT"
 	]
 	
 	let zones: [[String]] = [
@@ -27,6 +28,13 @@ class TableViewController: UITableViewController, UITextFieldDelegate {
 		"Snow",
 		"Hawaii",
 		"Amazon"
+		],
+		
+		[
+		"Terms and conditions",
+		"Privacy policy",
+		"Send to a friend",
+		"Leave a review"
 		]
 	]
 	
@@ -126,7 +134,7 @@ class TableViewController: UITableViewController, UITextFieldDelegate {
 					cell!.textLabel.bounds.size.height - dy
 				);
 				//let textField: UITextField = UITextField(frame: cell!.textLabel.frame)
-				textField.backgroundColor = UIColor.clearColor()
+				textField.backgroundColor = cell!.textLabel.backgroundColor
 				textField.textColor = UIColor.blackColor()
 				textField.placeholder = "First Name"
 				textField.autocorrectionType = UITextAutocorrectionType.No
@@ -146,7 +154,7 @@ class TableViewController: UITableViewController, UITextFieldDelegate {
 					cell!.textLabel.bounds.size.height - dy
 				);
 				//let textField: UITextField = UITextField(frame: cell!.textLabel.frame)
-				textField.backgroundColor = UIColor.clearColor()
+				textField.backgroundColor = cell!.textLabel.backgroundColor
 				textField.textColor = UIColor.blackColor()
 				textField.placeholder = "Last Name"
 				//textField.font = cell.textLabel.font

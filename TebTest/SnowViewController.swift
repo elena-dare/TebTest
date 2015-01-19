@@ -15,18 +15,6 @@ class SnowViewController: UIViewController {
 		self.title = "Snow";
 		tabBarItem.image = UIImage(named: "TabSnowSelected")
 		
-		/*
-		if tabBarController?.selectedIndex != 0 {
-			tabBarItem.image = UIImage(named: "TabSnowDeselected")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
-		} else {
-			tabBarItem.image = UIImage(named: "TabSnowSelected")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
-		}*/
-		
-		//tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.Contacts, tag: 0);
-		
-		//UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.grayColor()], forState:.Normal)
-		//UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.redColor()], forState:.Selected)
-		//UITabBar.appearance().tintColor = UIColor.redColor()
 		navigationItem.prompt = "Snow"
 	
 	}

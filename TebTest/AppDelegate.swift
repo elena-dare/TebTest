@@ -31,15 +31,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 			TableViewController(style: UITableViewStyle.Grouped)
 		]
 		
-		//let snowViewController: SnowViewController = SnowViewController()
-		//let navigationController: UINavigationController = UINavigationController(nibName: nil, bundle: nil);
-		//navigationController.pushViewController(snowViewController, animated: false);
-		//snowViewController.append(navigationController);
+		/*
+		let navigationController: UINavigationController = window!.rootViewController! as UINavigationController;
+		let tableViewController: TableViewController = TableViewController(style: UITableViewStyle.Plain);
+		navigationController.pushViewController(SnowViewController(), animated: false);
+		*/
 		
 		tabBarController.selectedIndex = 0 //unnecessary because starts from the first by default
 		window!.rootViewController = tabBarController;
-		
-		//window!.rootViewController = TableViewController(style: UITableViewStyle.Grouped)
 		
 		return true
 	}
