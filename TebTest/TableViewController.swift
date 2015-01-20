@@ -10,7 +10,7 @@ import UIKit
 
 class TableViewController: UITableViewController, UITextFieldDelegate {
 	let cellReuseIdentifier: String = "section"
-	
+
 	
 	let headers: [String] = [
 		"\n YOUR DATA",
@@ -122,6 +122,58 @@ class TableViewController: UITableViewController, UITextFieldDelegate {
 			}
 		}
 		
+		/*
+		if indexPath.section == 1 {
+			
+			if indexPath.row == 2 && indexPath.row == 1 && indexPath.row == 0 {
+				if cell!.accessoryType == UITableViewCellAccessoryType.Checkmark {
+					slideUpModal()
+					println("Check")
+					
+				}
+			}
+		}*/
+		
+		
+		/*
+			switch (indexPath.row == 0, indexPath.row == 1, indexPath.row == 2) {
+				case let (indexPath.row == 0, indexPath.row == 1, indexPath.row == 2):
+					if cell!.accessoryType == UITableViewCellAccessoryType.Checkmark {
+					return println("up")
+				}
+				default: return
+			}*/
+
+		
+		if indexPath.section == 1 {
+			
+			if indexPath.row == 0 {
+				if cell!.accessoryType == UITableViewCellAccessoryType.None {
+					return
+				}
+			} else if indexPath.row == 1 {
+				if cell!.accessoryType == UITableViewCellAccessoryType.None {
+					return
+				}
+			} else {
+				slideUpModal()
+			}
+		}
+	
+		
+	/*
+		switch (cell!.accessoryType == UITableViewCellAccessoryType.Checkmark) {
+			case indexPath.row == 0: return
+			case indexPath.row == 1: return
+			//case indexPath.row == 2: return
+			default: slideUpModal()
+		
+		}
+	*/
+		
+		
+		
+		
 		if indexPath.section == 0 {
 			if indexPath.row == 0 {
 				//cell.textLabel.text =  "hello";
@@ -178,6 +230,12 @@ class TableViewController: UITableViewController, UITextFieldDelegate {
 	func textFieldDidEndEditing(textField: UITextField) {
 	
 	}*/
+	
+	func slideUpModal() {
+		let modalViewController: ModalViewController = ModalViewController();
+		presentViewController(modalViewController, animated: true, completion: nil)
+	}
+
 	
 	
     /*

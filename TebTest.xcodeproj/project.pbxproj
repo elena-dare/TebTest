@@ -20,6 +20,8 @@
 		7988DDAB1A5B86AC00E1354D /* AmazonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7988DDAA1A5B86AC00E1354D /* AmazonView.swift */; };
 		7988DDAF1A5B86DC00E1354D /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7988DDAE1A5B86DC00E1354D /* TileView.swift */; };
 		79D73F191A62F65B001C7A54 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D73F181A62F65B001C7A54 /* TableViewController.swift */; };
+		79DFFD781A6C843100CBC05D /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DFFD771A6C843100CBC05D /* ModalViewController.swift */; };
+		79DFFDAA1A6CA03600CBC05D /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DFFDA91A6CA03600CBC05D /* ModalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		7988DDAA1A5B86AC00E1354D /* AmazonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmazonView.swift; sourceTree = "<group>"; };
 		7988DDAE1A5B86DC00E1354D /* TileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
 		79D73F181A62F65B001C7A54 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		79DFFD771A6C843100CBC05D /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		79DFFDA91A6CA03600CBC05D /* ModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 				7988DDA21A5B865600E1354D /* AmazonViewController.swift */,
 				7988DDAA1A5B86AC00E1354D /* AmazonView.swift */,
 				79D73F181A62F65B001C7A54 /* TableViewController.swift */,
+				79DFFD771A6C843100CBC05D /* ModalViewController.swift */,
+				79DFFDA91A6CA03600CBC05D /* ModalView.swift */,
 				7988DD821A5B85B700E1354D /* Main.storyboard */,
 				7988DD851A5B85B700E1354D /* Images.xcassets */,
 				7988DD871A5B85B700E1354D /* LaunchScreen.xib */,
@@ -233,12 +239,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79DFFDAA1A6CA03600CBC05D /* ModalView.swift in Sources */,
 				7988DDAF1A5B86DC00E1354D /* TileView.swift in Sources */,
 				7988DDAB1A5B86AC00E1354D /* AmazonView.swift in Sources */,
 				7988DDA31A5B865600E1354D /* AmazonViewController.swift in Sources */,
 				7988DDA91A5B869A00E1354D /* HawaiiView.swift in Sources */,
 				7988DDA71A5B868500E1354D /* SnowView.swift in Sources */,
 				7988DD7F1A5B85B700E1354D /* AppDelegate.swift in Sources */,
+				79DFFD781A6C843100CBC05D /* ModalViewController.swift in Sources */,
 				79D73F191A62F65B001C7A54 /* TableViewController.swift in Sources */,
 				7988DD9F1A5B862B00E1354D /* SnowViewController.swift in Sources */,
 				7988DDA11A5B863F00E1354D /* HawaiiViewController.swift in Sources */,
