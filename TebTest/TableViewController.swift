@@ -92,12 +92,12 @@ class TableViewController: UITableViewController, UITextFieldDelegate {
 		let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("section", forIndexPath: indexPath) as UITableViewCell
 		
         // Configure the cell...
-		cell.textLabel.text = zones[indexPath.section][indexPath.row];
-		let fileName: String = cell.textLabel.text! + ".jpg";
-		cell.imageView.image = UIImage(named: fileName);	//nil if .jpg file doesn't exist
+		cell.textLabel!.text = zones[indexPath.section][indexPath.row];
+		let fileName: String = cell.textLabel!.text! + ".jpg";
+		cell.imageView!.image = UIImage(named: fileName);	//nil if .jpg file doesn't exist
 		
 		if indexPath.section == 0 {
-			cell.textLabel.textColor = UIColor.grayColor()
+			cell.textLabel!.textColor = UIColor.grayColor()
 		}
 		
 		return cell;
@@ -109,9 +109,9 @@ class TableViewController: UITableViewController, UITextFieldDelegate {
 	
 	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 		let cell: UITableViewCell? = tableView.cellForRowAtIndexPath(indexPath);
-		let textField: UITextField = UITextField(frame: cell!.textLabel.frame)
+		let textField: UITextField = UITextField(frame: cell!.textLabel!.frame)
 		
-	
+		// add the checkmarks
 		if indexPath.section == 1 {
 			if cell != nil {
 				if cell!.accessoryType == UITableViewCellAccessoryType.None {
@@ -122,98 +122,56 @@ class TableViewController: UITableViewController, UITextFieldDelegate {
 			}
 		}
 		
-		/*
-		if indexPath.section == 1 {
-			
-			if indexPath.row == 2 && indexPath.row == 1 && indexPath.row == 0 {
-				if cell!.accessoryType == UITableViewCellAccessoryType.Checkmark {
-					slideUpModal()
-					println("Check")
-					
-				}
+		// all three checkmarks at the same time for the slideUpModal func
+			if tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 1))!.accessoryType == UITableViewCellAccessoryType.Checkmark
+				
+				&& tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 1, inSection: 1))!.accessoryType == UITableViewCellAccessoryType.Checkmark
+				
+				&& tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 2, inSection: 1))!.accessoryType == UITableViewCellAccessoryType.Checkmark {
+					slideUpModal();
 			}
-		}*/
-		
-		
-		/*
-			switch (indexPath.row == 0, indexPath.row == 1, indexPath.row == 2) {
-				case let (indexPath.row == 0, indexPath.row == 1, indexPath.row == 2):
-					if cell!.accessoryType == UITableViewCellAccessoryType.Checkmark {
-					return println("up")
-				}
-				default: return
-			}*/
 
-		
-		if indexPath.section == 1 {
-			
-			if indexPath.row == 0 {
-				if cell!.accessoryType == UITableViewCellAccessoryType.None {
-					return
-				}
-			} else if indexPath.row == 1 {
-				if cell!.accessoryType == UITableViewCellAccessoryType.None {
-					return
-				}
-			} else {
-				slideUpModal()
-			}
-		}
-	
-		
-	/*
-		switch (cell!.accessoryType == UITableViewCellAccessoryType.Checkmark) {
-			case indexPath.row == 0: return
-			case indexPath.row == 1: return
-			//case indexPath.row == 2: return
-			default: slideUpModal()
-		
-		}
-	*/
-		
-		
-		
-		
+		// adding the text field
 		if indexPath.section == 0 {
 			if indexPath.row == 0 {
 				//cell.textLabel.text =  "hello";
-				let font: UIFont = cell!.textLabel.font;
-				let dy: CGFloat = (cell!.textLabel.bounds.size.height - font.lineHeight) / 2;
+				let font: UIFont = cell!.textLabel!.font;
+				let dy: CGFloat = (cell!.textLabel!.bounds.size.height - font.lineHeight) / 2;
 				let frame: CGRect = CGRectMake(
-					cell!.textLabel.frame.origin.x,
-					cell!.textLabel.frame.origin.y + dy,
-					cell!.textLabel.bounds.size.width,
-					cell!.textLabel.bounds.size.height - dy
+					cell!.textLabel!.frame.origin.x,
+					cell!.textLabel!.frame.origin.y + dy,
+					cell!.textLabel!.bounds.size.width,
+					cell!.textLabel!.bounds.size.height - dy
 				);
 				//let textField: UITextField = UITextField(frame: cell!.textLabel.frame)
-				textField.backgroundColor = cell!.textLabel.backgroundColor
+				textField.backgroundColor = cell!.textLabel!.backgroundColor
 				textField.textColor = UIColor.blackColor()
 				textField.placeholder = "First Name"
 				textField.autocorrectionType = UITextAutocorrectionType.No
 				textField.delegate = self
 				
-				cell!.textLabel.text = nil
+				cell!.textLabel!.text = nil
 				cell!.addSubview(textField)
 				textField.becomeFirstResponder()
 			}
 			if indexPath.row == 1 {
-				let font: UIFont = cell!.textLabel.font;
-				let dy: CGFloat = (cell!.textLabel.bounds.size.height - font.lineHeight) / 2;
+				let font: UIFont = cell!.textLabel!.font;
+				let dy: CGFloat = (cell!.textLabel!.bounds.size.height - font.lineHeight) / 2;
 				let frame: CGRect = CGRectMake(
-					cell!.textLabel.frame.origin.x,
-					cell!.textLabel.frame.origin.y + dy,
-					cell!.textLabel.bounds.size.width,
-					cell!.textLabel.bounds.size.height - dy
+					cell!.textLabel!.frame.origin.x,
+					cell!.textLabel!.frame.origin.y + dy,
+					cell!.textLabel!.bounds.size.width,
+					cell!.textLabel!.bounds.size.height - dy
 				);
 				//let textField: UITextField = UITextField(frame: cell!.textLabel.frame)
-				textField.backgroundColor = cell!.textLabel.backgroundColor
+				textField.backgroundColor = cell!.textLabel!.backgroundColor
 				textField.textColor = UIColor.blackColor()
 				textField.placeholder = "Last Name"
 				//textField.font = cell.textLabel.font
 				textField.autocorrectionType = UITextAutocorrectionType.No
 				textField.delegate = self
 				
-				cell!.textLabel.text = nil
+				cell!.textLabel!.text = nil
 				cell!.addSubview(textField)
 				textField.becomeFirstResponder()
 			}
