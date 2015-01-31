@@ -100,6 +100,11 @@ class TableViewController: UITableViewController, UITextFieldDelegate {
 			cell.textLabel!.textColor = UIColor.grayColor()
 		}
 		
+		//add the disclosure indicator
+		if indexPath.section == 2 {
+				cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+		}
+		
 		return cell;
     }
 	
@@ -123,6 +128,8 @@ class TableViewController: UITableViewController, UITextFieldDelegate {
 		}
 		
 		// all three checkmarks at the same time for the slideUpModal func
+		if indexPath.section == 1{
+			
 			if tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 1))!.accessoryType == UITableViewCellAccessoryType.Checkmark
 				
 				&& tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 1, inSection: 1))!.accessoryType == UITableViewCellAccessoryType.Checkmark
@@ -130,6 +137,7 @@ class TableViewController: UITableViewController, UITextFieldDelegate {
 				&& tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 2, inSection: 1))!.accessoryType == UITableViewCellAccessoryType.Checkmark {
 					slideUpModal();
 			}
+		}
 
 		// adding the text field
 		if indexPath.section == 0 {
@@ -176,6 +184,85 @@ class TableViewController: UITableViewController, UITextFieldDelegate {
 				textField.becomeFirstResponder()
 			}
 		}
+		
+		//Add the other view controllers for the disclosure indicator
+		let ip0: NSIndexPath = NSIndexPath(forRow: 0, inSection: 2)
+		let ip1: NSIndexPath = NSIndexPath(forRow: 1, inSection: 2)
+		
+		
+		if indexPath.compare(ip0) == NSComparisonResult.OrderedSame {
+			
+			//if indexPath.section == 0 && indexPath.row == 0 {
+			
+			
+			let newViewController: UIViewController = UIViewController(nibName: nil, bundle: nil);
+			//newViewController.title = name;
+			let newView: UIView = UIView(frame: CGRectZero)
+			newViewController.view = newView;
+			let navigationController: UINavigationController = UINavigationController(rootViewController: TableViewController(nibName: nil, bundle: nil))
+			navigationController.pushViewController(newViewController, animated: true)
+			
+			println("selected photo");
+			
+			//let secondController: PhotoController = PhotoController(title: "Photo");
+			//navigationController!.pushViewController(secondController, animated: true);
+			
+		} /*else if indexPath.compare(ip1) == NSComparisonResult.OrderedSame {
+			//} else if indexPath.section == 0 && indexPath.row == 1  {
+			println("selected video");
+			
+			
+			let thirdController: VideoController =
+			VideoController(title: "Video");
+			navigationController!.pushViewController(thirdController, animated: true);
+			
+		} else	{
+			return;
+		}
+		*/
+		
+		
+		/*
+		
+		if indexPath.compare(ip0) == NSComparisonResult.OrderedSame {
+			println("here")
+		
+		//ip refers to a tree that is a leaf.  Display its Wikipedia article.
+		let name: NSString = "Terms and conditions";
+			println("and here")
+		var string: NSString =
+		name.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!;
+		string = "http://en.m.wikipedia.org/wiki/".stringByAppendingString(string);
+		let url: NSURL? = NSURL(string: string);
+		let data: NSData? = NSData(contentsOfURL: url!);
+		
+		if data == nil {
+			println("could not load URL \(url)");
+		} else {
+			let webView: UIWebView = UIWebView(frame: CGRectZero);
+			webView.scalesPageToFit = true;
+			webView.loadData(data, MIMEType: "text/html", textEncodingName: "NSUTF8StringEncoding", baseURL: url);
+			println("what about here")
+			
+			//Give the web view a generic view controller.
+			let viewController: UIViewController = UIViewController(nibName: nil, bundle: nil);
+			viewController.title = name;
+			viewController.view = webView;
+			//navigationController!.pushViewController(viewController, animated: true);
+			println("here too")
+		}
+		}
+		*/
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 	
 	//called when the return key pressed and/or when move to a different cell
@@ -184,10 +271,6 @@ class TableViewController: UITableViewController, UITextFieldDelegate {
 		return true
 	}
 	
-	/*
-	func textFieldDidEndEditing(textField: UITextField) {
-	
-	}*/
 	
 	func slideUpModal() {
 		let modalViewController: ModalViewController = ModalViewController();
